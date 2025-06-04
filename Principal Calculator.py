@@ -102,8 +102,8 @@ while True:
 
     # --- Calculations ---
     rate_decimal = annual_rate / 100
-    simple_interest = principal * rate_decimal * time_years
-    total_amount = principal + simple_interest
+    principal_interest = principal * rate_decimal * time_years
+    total_amount = principal + principal_interest
 
     time_months = time_years * 12
 
@@ -120,7 +120,7 @@ while True:
     print(f"Original Time Input: {time_value:,.2f} {time_unit}")
     print(f"Total Time (Years): {time_years:,.2f}")
     print(f"Total Time (Months): {time_months:,.2f}")
-    print(f"Calculated Simple Interest: ${simple_interest:,.2f}")
+    print(f"Calculated principal Interest: ${principal_interest:,.2f}")
     print(f"Total Amount After Interest: ${total_amount:,.2f}")
     print(f"Estimated Minimum Monthly Payment: ${minimum_monthly_payment:,.2f}")
     print("---------------------------\n")
@@ -132,7 +132,7 @@ while True:
             print("\n----------------------------------------------------------------------")
             break # Breaks out of this inner loop, then outer loop continues for a new calculation
         elif play_again == 'no':
-            print("Thank you for using the Simple Interest Calculator. Goodbye!")
+            print("Thank you for using the principal Interest Calculator. Goodbye!")
             exit() # Exits the entire program
         elif play_again == 'restart': # User can type restart here too
             print("\n----------------------------------------------------------------------")
