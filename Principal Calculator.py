@@ -11,7 +11,7 @@ def clear_screen():
         _ = os.system('clear')
 
 # --- Inform user about the restart option ---
-print("Welcome to the Simple Interest Calculator!")
+print("Welcome to the principal Interest Calculator!")
 print("Note: You can type 'restart' at any prompt to go back to the beginning.")
 print("----------------------------------------------------------------------\n")
 
@@ -121,8 +121,8 @@ while True:
 
     # --- Calculations ---
     rate_decimal = annual_rate / 100
-    simple_interest = principal * rate_decimal * time_years
-    total_amount = principal + simple_interest
+    principal_interest = principal * rate_decimal * time_years
+    total_amount = principal + principal_interest
 
     time_months = time_years * 12
 
@@ -141,7 +141,7 @@ while True:
     print(f"Original Time Input: {time_value:,.2f} {time_unit}")
     print(f"Total Time (Years): {time_years:,.2f}")
     print(f"Total Time (Months): {time_months:,.2f}")
-    print(f"Calculated Simple Interest: ${simple_interest:,.2f}")
+    print(f"Calculated principal Interest: ${principal_interest:,.2f}")
     print(f"Total Amount After Interest: ${total_amount:,.2f}")
     print(f"Estimated Minimum Monthly Payment: ${minimum_monthly_payment:,.2f}")
     print("---------------------------\n")
@@ -155,7 +155,7 @@ while True:
             clear_screen() # Clear screen before restarting for a clean slate
             break
         elif play_again == 'no':
-            print("Thank you for using the Simple Interest Calculator. Goodbye!")
+            print("Thank you for using the principal Interest Calculator. Goodbye!")
             exit()
         elif play_again == 'restart': # User can type restart here too
             print("\nRestarting from the beginning...\n")
